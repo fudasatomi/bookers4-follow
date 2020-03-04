@@ -38,5 +38,7 @@
 </div>
 
 <div class="row">
+	<% if user == current_user %>
 	<%= link_to '',edit_user_path(user), class: "col-xs-12 btn btn-default glyphicon glyphicon-wrench edit_user_#{user.id}" %>
+	<% end %>
 </div>
