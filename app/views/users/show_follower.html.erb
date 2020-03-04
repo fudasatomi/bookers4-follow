@@ -1,0 +1,20 @@
+<div class="container">
+	<div class="row">
+		<div class="col-xs-3 sidebar">
+			<%= render 'users/profile', user: @user %>
+			<!--同コントローラーのviewで表示ならusersは省略可 -->
+			<%= render 'books/newform', book: @book %>
+		</div>
+		<div class="col-xs-9">
+			<h2>Follower</h2>
+			<% @user.followers.each do |user| %>
+			<table>
+				<tr>
+					<td>  <%= user.username %> </td>
+					<td><%= link_to '詳細', user_path(user) %></td>
+				</tr>
+			</table>
+			<% end %>
+		</div>
+	</div>
+</div>
