@@ -11,6 +11,27 @@
 			<th>introduction</th>
 			<th><%= user.introduction %></th>
 		</tr>
+		<tr>
+			<th>follows</th>
+			<th><% @user ||= current_user %>
+  				<a href="<%= following_user_path(@user) %>">
+    				<strong id="following" class="stat">
+      			<%= @user.followings.count %>
+   					 </strong>
+  				</a>
+  			</th>
+  		</tr>
+  		<tr>
+			<th>followers</th>
+			<th>
+				<a href="<%= followers_user_path(@user) %>">
+    			<strong id="followers" class="stat">
+      			<%= @user.followers.count %>
+   				 </strong>
+   		    	</a>
+   		    </th>
+  		</tr>
+
 </table>
 
 <div class="row">
