@@ -25,7 +25,7 @@
 						<td>
 						<% if current_user.following?(user) %>
 							<td>
-								<%= link_to relationship_path(followers_id: user.id), method: :delete do %>
+								<%= link_to relationship_path(:id), method: :delete do %>
 								フォローを外す
 								<% end %>
 							</td>
