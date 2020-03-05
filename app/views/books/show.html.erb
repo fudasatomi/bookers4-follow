@@ -61,7 +61,7 @@
 						<%= book_comment.comment %>
 					</td>
 					<td>
-					   <% unless book_comment.user != book_comment.user %>
+					   <% unless current_user != book_comment.user %>
 						<%= link_to "Comment Destroy", book_book_comments_path(book_comment.id), method: :delete, data: {confirm: "本当に削除してもよろしいですか？"}, class: "btn-sm btn-danger" %><% end %>
 					</td>
 					<% end %>

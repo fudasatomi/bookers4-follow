@@ -21,7 +21,7 @@ before_action :authenticate_user!
       		redirect_to request.referer
     	end
     	@book_comment.destroy
-    	redirect_to request.referer
+    	redirect_back(fallback_location: root_path)
 	end
 
 	private
