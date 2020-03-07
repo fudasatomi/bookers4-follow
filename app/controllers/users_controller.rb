@@ -32,15 +32,11 @@ class UsersController < ApplicationController
   end
 #ーーーーー自分がフォローしている（Following）、自分をフォローしている（Folloewers）の詳細画面へ行くためのアクション
   def following
-      @user  = User.find(params[:id])
-      @users = @user.followings
-      render 'show_follow'
+
   end
 
   def followers
-    @user  = User.find(params[:id])
-    @users = @user.followers
-    render 'show_follower'
+
   end
 #ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
   private
