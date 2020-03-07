@@ -10,11 +10,13 @@ class RelationshipsController < ApplicationController
     redirect_back(fallback_location: root_path)
   end
 
+# ユーザー　が　フォローしている人を見るページへのアクション
   def following
     user = User.find(params[:user_id])
     @users = user.following_user
   end
 
+# ユーザー　を　フォローしている人を見るページへのアクション
   def follower
     user = User.find(params[:user_id])
     @users = user.follower_user
